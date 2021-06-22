@@ -14,8 +14,7 @@ spec:
         server: {{.Values.nginx.name}}
     spec:
       containers:
-        - name: {{ .Values.nginx.name}}
-          image: {{ .Values.nginx.image.name}} : {{.Values.nginx.image.tag }}
-          imagePullPolicy: Never
-          ports:
-             -containerPort: {{.Values.nginx.image.exposedPort}}
+      - name: {{ .Values.nginx.name}}
+        image: "{{ .Values.nginx.image.name}}:{{.Values.nginx.image.tag }}"
+        ports:
+        - containerPort: {{.Values.nginx.image.exposedPort}}
