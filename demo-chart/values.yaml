@@ -5,11 +5,11 @@
 nginx:
   name: nginx
   image:
-    name: app-nginx
-    tag: v2
+    name: nginx
+    tag: latest
     exposedPort: 80
   
-  replicas: 1
+  replicas: 2
 
   service:
     type: NodePort
